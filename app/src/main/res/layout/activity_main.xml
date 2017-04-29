@@ -5,7 +5,43 @@
     android:layout_height="match_parent"
     android:background="@android:color/black"
     android:orientation="vertical">
+<LinearLayout
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
 
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_settings" />
+
+    <EditText
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible"
+        android:id="@+id/editTextSearchSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+       android:maxLines="1"/>
+
+    <ImageButton
+        android:layout_weight="1"
+        android:id="@+id/imageButtonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,15 +96,15 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/infotv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingBottom="16dp"
         android:paddingTop="16dp"
-        android:text="This is main view where all songs will be listed, depending what button user selects it will oreder songs that way (example Artists button will order songs by artist name)
-                         order by song name will be default on start."
-        android:textColor="@android:color/black"
-        android:visibility="gone" />
+        android:text="This is main view where all songs will be listed, depending what button user selects it will oreder songs that way (example Artists button will order songs by artist name) order by song name will be default on start.Click on song to open single song activity. \n CLICK ON THIS TO REMOVE THIS WINDOW"
+        android:textColor="@android:color/white"
+        android:visibility="visible" />
 
 
     <ScrollView
