@@ -11,6 +11,6 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Here will be displayed some song info , probably i will replace this with some inflated view"
+        android:text="@string/display_msg3"
          />
 </LinearLayout>

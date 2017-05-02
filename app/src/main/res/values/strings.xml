@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">MusicalAppStructure</string>
+    <string name="songs">Songs</string>
+    <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="playlists">Playlists</string>
+    <string name="display_msg">This is main view where all songs will be listed, depending what button user selects it will oreder songs that way (example Artists button will order songs by artist name) order by song name will be default on start.Click on song to open single song activity. If we want to play music we need to use MediaPlayer class,
+        after some researching and watching tutorials of mediaplayer implementation i think it could be implemented with these steps :\n
+        1. create list view where songs will be displayed\n2.Query the Device for Songs(- create model class for song,\n- store the songs in a list and display them in the ListView\n- create a ContentResolver instance, retrieve the URI for external music files,and create a Cursor instance using the ContentResolver instance to query the music files)\n3. Display the Songs (-define a layout to represent each song in the list,\n-create  Adapter to put the songs to the list view\n4. Create a Service ( -pass the list of songs into the Service class,\n- play from it using the MediaPlayer class\n
+        CLICK ON THIS TO REMOVE THIS WINDOW</string>
+    <string name="current_song_name">Current Song Name</string>
+    <string name="_03_00">03 : 00</string>
+    <string name="display_msg2">This is single song view, info button opens activity that gives some information about song,drop menu button doesent work for now, plan is to add some options like add song to playlist and share   CLICK ON THIS TO REMOVE THIS WINDOW</string>
+    <string name="song_name_n_author_name">Song name author name</string>
+    <string name="display_msg3">Here will be displayed some song info , probably i will replace this with some inflated view</string>
 </resources>
