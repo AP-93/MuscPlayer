@@ -1,81 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ante.musicalappstructure.PlaySongActivity">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black"
-        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton2"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:text="02 : 00"
+            android:gravity="center"
+            android:id="@+id/textVievStartTime"
             android:layout_marginLeft="16dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@android:drawable/ic_menu_more" />
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:layout_weight="1"
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="35" />
 
         <TextView
-            android:id="@+id/songName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:id="@+id/textViewendtime"
             android:gravity="center"
-            android:padding="16dp"
-            android:text="Song name \n author name" />
-
-        <ImageButton
-            android:id="@+id/imageButtonDisplayInfo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="16dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@android:drawable/ic_dialog_info" />
+            android:text="03 : 00"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/infotv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="16dp"
-        android:paddingTop="16dp"
-        android:text="This is single song view, info button opens activity that gives some information about song,drop menu button doesent work for now, plan is to add some options like add song to playlist and share \n CLICK ON THIS TO REMOVE THIS WINDOW"
-        android:textColor="@android:color/white"
-        android:visibility="visible" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scaleType="centerCrop"
-        android:src="@drawable/music_player_large" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black"
-        android:max="100"
-        android:progress="35" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/black"
-        android:gravity="end"
-        android:paddingRight="16dp"
-        android:text="03 : 00"
-        android:textColor="@android:color/white"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="Current Song Name"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -95,7 +74,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:background="@drawable/round_button"
-                app:srcCompat="@android:drawable/ic_popup_sync" />
+                android:src="@android:drawable/ic_popup_sync" />
 
             <ImageButton
                 android:id="@+id/imageButtonBack"
@@ -104,7 +83,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:background="@drawable/round_button"
-                app:srcCompat="@android:drawable/ic_media_previous" />
+                android:src="@android:drawable/ic_media_previous" />
 
             <View
                 android:layout_width="48dp"
@@ -117,7 +96,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/round_button"
-                app:srcCompat="@android:drawable/ic_media_next" />
+                android:src="@android:drawable/ic_media_next" />
 
             <ImageButton
                 android:id="@+id/imageButtonShuffle"
@@ -137,7 +116,7 @@
             android:layout_centerVertical="true"
             android:background="@drawable/round_button"
             android:visibility="visible"
-            app:srcCompat="@android:drawable/ic_media_play" />
+            android:src="@android:drawable/ic_media_play" />
 
         <ImageButton
             android:id="@+id/imageButtonPause"
@@ -147,6 +126,6 @@
             android:layout_centerVertical="true"
             android:background="@drawable/round_button"
             android:visibility="gone"
-            app:srcCompat="@android:drawable/ic_media_pause" />
+            android:src="@android:drawable/ic_media_pause" />
     </RelativeLayout>
 </LinearLayout>
