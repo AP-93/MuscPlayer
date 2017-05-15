@@ -107,7 +107,7 @@
 
     <LinearLayout
         android:id="@+id/audioControler"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -118,9 +118,10 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/currentTime"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="02 : 00"
+                android:text="00 : 00"
                 android:gravity="center"
                 android:layout_marginLeft="16dp"
                 android:textColor="@android:color/white"
@@ -129,12 +130,10 @@
         android:layout_weight="1"
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="100"
-        android:progress="35" />
+        android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/duration"
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -150,7 +149,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewDisplayName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -175,8 +174,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButtonRepeat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:background="@drawable/round_button"
@@ -204,14 +203,28 @@
                     android:background="@drawable/round_button"
                     android:src="@android:drawable/ic_media_next" />
 
-                <ImageButton
-                    android:id="@+id/imageButtonShuffle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <RelativeLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:background="@drawable/round_button"
-                    android:src="@drawable/ic_shuffle" />
+                    android:layout_marginStart="16dp">
+
+                    <ImageButton
+                        android:id="@+id/shufflleDisabled"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_shuffle"
+                        android:background="@drawable/round_button"
+                        android:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/shuffleEnabled"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_shuffle_togg"
+                        android:background="@drawable/round_button"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
         <ImageButton

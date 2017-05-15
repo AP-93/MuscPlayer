@@ -27,9 +27,9 @@ public class songAdapter extends BaseAdapter {
 
 
     // constructor method to instantiate instance variables
-    public songAdapter(Context c, ArrayList<song> theSongs) {
+    public songAdapter(Context context, ArrayList<song> theSongs) {
         songs = theSongs;
-        songInf = LayoutInflater.from(c);         //Obtains the LayoutInflater from the given context
+        songInf = LayoutInflater.from(context);         //Obtains the LayoutInflater from the given context
         //The LayoutInflater takes layout XML-files and creates different View-objects from its contents.
     }
 
@@ -38,23 +38,17 @@ public class songAdapter extends BaseAdapter {
         return songs.size();
     }
 
-    @Override
-    public Object getItem(int arg0) {
-        // TODO Auto-generated method stub
-        return null;
-    }
 
-    @Override
-    public long getItemId(int arg0) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {      //// TODO: 30/04/2017  add viewHolder
         //map to song layout
-        LinearLayout songLay = (LinearLayout) songInf.inflate
-                (R.layout.song, parent, false);
+
+        View songLay = convertView;
+        if (songLay == null) {
+            songLay = songInf.inflate(R.layout.song, parent, false);
+
+        }
         //get title and artist views
         TextView songView = (TextView) songLay.findViewById(R.id.song_title);
         TextView artistView = (TextView) songLay.findViewById(R.id.song_artist);
@@ -66,6 +60,17 @@ public class songAdapter extends BaseAdapter {
         //set position as tag
         songLay.setTag(position);          //We set the song position as the tag for each item in the list view when we defined the Adapter class.
         return songLay;
+    }
+
+
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
     }
 
 }
